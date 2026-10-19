@@ -1,0 +1,71 @@
+{
+  "name": "genpark-personal-agent-dynamic-subscription-churn-recovery-negotiator-skill",
+  "title": "Dynamic Subscription Churn & Retention Bargaining Skill",
+  "version": "1.0.0",
+  "description": "SaaS and digital subscription price monitor, cancellation flow retention script synthesizer, secret retention coupon extraction, and competitor alternative benchmarker for personal copilot agents. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "organization": {
+    "name": "GenPark Inc.",
+    "url": "https://www.genpark.ai",
+    "linkedin": "https://www.linkedin.com/company/92955550"
+  },
+  "mcp_version": "2024-11-05",
+  "category": "personal-agent",
+  "tools": [
+    {
+      "name": "simulate_retention_flow_concession",
+      "description": "Model vendor customer lifetime value (LTV) and churn prevention budget to identify probability of receiving 30-50% retention discounts.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "service_name": {
+            "type": "string"
+          },
+          "current_monthly_fee_usd": {
+            "type": "number"
+          },
+          "subscription_age_months": {
+            "type": "integer"
+          },
+          "competitor_alternative_fee_usd": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "service_name",
+          "current_monthly_fee_usd",
+          "subscription_age_months"
+        ]
+      }
+    },
+    {
+      "name": "generate_cancellation_negotiation_script",
+      "description": "Synthesize polite yet firm cancellation exit-survey arguments to elicit automated retention waivers or pause options.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "service_name": {
+            "type": "string"
+          },
+          "primary_reason": {
+            "type": "string",
+            "enum": [
+              "too_expensive",
+              "underutilized",
+              "switching_to_competitor",
+              "temporary_break"
+            ]
+          },
+          "desired_discount_pct": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "service_name",
+          "primary_reason",
+          "desired_discount_pct"
+        ]
+      }
+    }
+  ]
+}
